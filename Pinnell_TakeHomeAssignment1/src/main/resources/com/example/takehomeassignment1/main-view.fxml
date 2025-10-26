@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.takehomeassignment1.MainController">
+    <top>
+        <HBox >
+            <TextField fx:id="searchField" promptText="Type a word and press Search" HBox.hgrow="ALWAYS"/>
+            <Button fx:id="searchButton" text="Search"/>
+        </HBox>
+    </top>
+    <left>
+        <VBox >
+            <Label text="Search History" />
+            <ListView fx:id="historyList" prefWidth="200" />
+        </VBox>
+    </left>
+    <center>
+        <StackPane>
+            <Label text="Select a word or search to see results." />
+        </StackPane>
+    </center>
+    <bottom>
+        <Button fx:id="playGameButton" text="Play Jeopardy Game" />
+    </bottom>
+</BorderPane>

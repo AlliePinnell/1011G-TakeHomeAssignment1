@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="484.0" prefWidth="640.0" style="-fx-background-color: #120d79;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.takehomeassignment1.GameController">
+
+    <!-- Top: Guess input and buttons -->
+    <top>
+        <HBox prefHeight="25.0" prefWidth="640.0">
+            <TextField fx:id="guessField" promptText="Enter your guess" style="-fx-font-family: &quot;Times New Roman&quot;;" HBox.hgrow="ALWAYS" />
+            <Button fx:id="submitButton" style="-fx-font-family: &quot;Times New Roman&quot;;" text="Submit Guess" />
+            <Button fx:id="restartButton" style="-fx-font-family: &quot;Times New Roman&quot;;" text="Restart Game" />
+        </HBox>
+    </top>
+
+    <!-- Center: Image and blanks -->
+    <center>
+        <VBox alignment="TOP_CENTER" prefHeight="867.0" prefWidth="917.0">
+            <ImageView fx:id="imageView" fitHeight="200.0" fitWidth="300.0" preserveRatio="true" />
+            <Label fx:id="blanksLabel" graphicTextGap="10.0" prefHeight="126.0" prefWidth="243.0" style="-fx-font-size: 24px; -fx-alignment: center; -fx-font-weight: bold; -fx-font-family: &quot;Times New Roman&quot;;" text="_" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+            <effect>
+               <DropShadow height="10.0" radius="4.5" spread="0.4" width="10.0" />
+            </effect>
+         </Label>
+           <Label fx:id="messageLabel" style="-fx-font-family: &quot;Times New Roman&quot;;" text="TEST" textFill="WHITE">
+            <font>
+               <Font size="26.0" />
+            </font>
+         </Label>
+         <Label fx:id="messageLabel1" prefHeight="65.0" prefWidth="269.0" scaleY="0.8" style="-fx-font-family: &quot;Impact&quot;;" text="JAVPARDY!">
+            <font>
+               <Font size="64.0" />
+            </font>
+            <textFill>
+               <LinearGradient endX="0.03154573982070297" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.41228070855140686" green="0.41228070855140686" blue="0.41228070855140686" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="1.0" green="1.0" blue="1.0" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill>
+            <effect>
+               <DropShadow height="21.41" radius="9.719999999999999" spread="1.0" width="19.47" />
+            </effect>
+         </Label>
+        </VBox>
+    </center>
+
+</BorderPane>
